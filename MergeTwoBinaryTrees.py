@@ -1,15 +1,5 @@
+from Tree import TreeNode
 from typing import List
-from PrintBTree import printBTree
-from contextlib import suppress
-
-# Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-    def __str__(self):
-        return printBTree(self,lambda n:(str(n.val),n.left,n.right))
         
 ####################### SOLUTION #################################################
 
@@ -42,8 +32,8 @@ B.right.right = TreeNode(7)
 
 print("\nInput: ")
 print("A:")
-with suppress(TypeError): print(A)
+A.printTree()
 print("B:")
-with suppress(TypeError): print(B)
+B.printTree()
 print("Merged tree: ")
-with suppress(TypeError): print(mergeTrees(A, B))
+mergeTrees(A, B).printTree()
